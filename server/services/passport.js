@@ -33,8 +33,8 @@ passport.use(
                 // create user in mongoDB
                 new User({
                     googleId: profile.id,
-                    lastName: profile.familyName,
-                    firstName: profile.givenName,
+                    lastName: profile.name.familyName,
+                    firstName: profile.name.givenName,
                     email: profile.emails[0].value,
                     photo: profile.photos[0].value
                 })
