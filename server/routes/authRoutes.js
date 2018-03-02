@@ -10,14 +10,21 @@ module.exports = (app) => {
             scope: ['profile', 'email']
         })
     );
-    app.get('/auth/google/callback', passport.authenticate('google'));
+    app.get(
+        '/auth/google/callback',
+        passport.authenticate('google'),
+        (req, res) => {
+            // after successfully logged in, redirect
+            res.redirect('/surverys');
+        }
+    );
     app.get('/api/current_user', (req, res)=>{
         res.send(req.user);
     });
     app.get('/api/logout', (req,res)=>{
         // passport attaches logout function
         req.logout();
-        res.send(req.user);
+        res.redirect('/');
     })
 };
 
