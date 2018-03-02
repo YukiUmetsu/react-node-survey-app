@@ -42,6 +42,5 @@ passport.use(
             photo: profile.photos[0].value
         }).save();
         done(null, user);
-
     })
 );
