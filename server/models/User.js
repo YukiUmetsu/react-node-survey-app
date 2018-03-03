@@ -9,7 +9,8 @@ const userSchema = new Schema({
     lastName: String,
     firstName: String,
     email: String,
-    photo: String
+    photo: String,
+    credits: { type: Number, default: 0 }
 });
 
 mongoose.model('users', userSchema);

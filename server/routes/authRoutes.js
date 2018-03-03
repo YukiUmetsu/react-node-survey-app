@@ -15,7 +15,7 @@ module.exports = (app) => {
         passport.authenticate('google'),
         (req, res) => {
             // after successfully logged in, redirect
-            res.redirect('/surverys');
+            res.redirect('/surveys');
         }
     );
     app.get('/api/current_user', (req, res)=>{
