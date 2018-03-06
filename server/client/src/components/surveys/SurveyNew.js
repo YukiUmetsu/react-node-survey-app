@@ -26,7 +26,7 @@ class SurveyNew extends Component {
             </div>
         );
     }
-};
+}
 
 export default reduxForm({
     form: 'surveyForm'

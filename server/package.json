@@ -11,7 +11,8 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "webhook": "lt --port 5000 -s 3iu4r23rh348",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\""
   },
   "author": "",
   "license": "ISC",
@@ -20,9 +21,12 @@
     "concurrently": "^3.5.1",
     "cookie-session": "^2.0.0-beta.3",
     "express": "^4.16.2",
+    "localtunnel": "^1.8.3",
+    "lodash": "^4.17.5",
     "mailgun-js": "^0.16.0",
     "mongoose": "^5.0.7",
     "nodemon": "^1.15.1",
+    "path-parser": "^3.0.1",
     "sendgrid": "^5.2.3",
     "stripe": "^5.5.0"
   }
